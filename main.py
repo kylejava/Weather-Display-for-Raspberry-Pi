@@ -17,7 +17,9 @@ def main():
         users_city.append(city)
         new_city = input("Would you like to enter another city? (Y/N)")
         if(new_city != "y"):
-            print(users_city[0])
+            while(LCD == True):
+                print("Weather in " + users_city[0] + ": "+ "Input Weather here")
+                print(datetime.datetime.utcnow().strftime("%H:%M:%S"))
         else:
 
             while(new_city == "y"):
@@ -26,6 +28,15 @@ def main():
         while(LCD == True):
             users_city_len = len(users_city)
             for i in range(0 , users_city_len):
-                    print(users_city[i])
+                    i = 0
+                    print(datetime.datetime.utcnow().strftime("%H:%M:%S"))
+                    print(("Weather in ") + str(users_city[i]) + (": ")+ ("Input Weather here"))
+                    if(keyboard.is_pressed('a')):
+                        i += 1
+                        while(keyboard.is_pressed('a')):
+                            print(datetime.datetime.utcnow().strftime("%H:%M:%S"))
+                            print(("Weather in ") + str(users_city[i]) + (": ")+ ("Input Weather here"))
+                    else:
+                        pass
 
 main()
