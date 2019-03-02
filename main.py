@@ -1,7 +1,7 @@
 import datetime
 import time
 import keyboard
-import pytz
+
 def add_city(city , users_city):
         city = input("Enter name of city: ")
         users_city.append(city)
