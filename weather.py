@@ -50,14 +50,8 @@ longitude = data['coord']['lon']
 
 description = data['weather'][0]['description']
 
+cel = 'Temperature : {} degree celcius'
 
 
-print('Temperature : {} degree celcius'.format(temp))
-
-print('Wind Speed : {} m/s'.format(wind_speed))
-
-print('Latitude : {}'.format(latitude))
-
-print('Longitude : {}'.format(longitude))
-
-print('Description : {}'.format(description))
+far = (((temp) *(9/5)+32))
+print(far)
