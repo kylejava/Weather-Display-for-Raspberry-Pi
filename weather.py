@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 #import requests
 
 
@@ -58,4 +56,3 @@ cel = 'Temperature : {} degree celcius'
 
 far = (((temp) *(9/5)+32))
 print(far)
->>>>>>> e454036dc8efbe5c67ae63c2055ae5132f3a2857
