@@ -21,7 +21,7 @@ from pprint import pprint
 
 
 
-city = input('Enter your city : ')
+city = raw_input('Enter your city : ')
 
 
 
