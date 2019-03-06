@@ -18,6 +18,9 @@ def main():
     users_city.append(city)
     new_city = input("Would you like to enter another city? (Y/N)")
 
+
+
+
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=3371747f2cc96f96f53f3da617aa3f91&units=metric'.format(city)
     res = requests.get(url)
     data = res.json()
@@ -27,9 +30,9 @@ def main():
     far = (((temp) *(9/5)+32))
 
     if(new_city != "y"):
-#            while(LCD == True):
-        print("Weather in " + users_city[0] + ": "+ str(far))
-        print("Time: " + datetime.datetime.now().strftime("%H:%M:%S"))
+        while(LCD == True):
+            print("Weather in " + users_city[0] + ": "+ str(far))
+            print("Time: " + datetime.datetime.now().strftime("%H:%M:%S"))
     else:
         while(new_city == "y"):
             add_city(city, users_city)
