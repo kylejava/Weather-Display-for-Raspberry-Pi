@@ -38,7 +38,7 @@ def main():
     temp = data['main']['temp']
     description = data['weather'][0]['description']
     cel = 'Temperature : {} degree celcius'
-    far = (((temp) *(9.0/5.0)+32))
+    far = (((9.0/5.0) *(temp)+32))
 
     if(new_city != "y"):
         while(LCD == True):
