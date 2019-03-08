@@ -1,3 +1,10 @@
+#This code is for the raspberry pi,
+#You will need to put this on your raspberry pi
+# You will also need to attach an lcd display on to the raspberry pi in order to use it
+#install lcddriver.py, there should be a link to it on my github
+#Also you do not need to import keyboard
+
+
 #this code is for the computer
 #I made this code before applying it on the raspberry pi in order to sort out my algorithm
 #This code is in python 3 while the main_pi.py is in python 2.7, which is why some syntax is different
@@ -5,13 +12,12 @@
 
 import datetime
 import time
-import keyboard
 import requests
 import sys
 from pprint import pprint
 
 def add_city(city , users_city):
-        city = input("Enter name of city: ")
+        city = raw_input("Enter name of city: ")
         users_city.append(city)
         return(users_city)
 
@@ -19,9 +25,9 @@ def add_city(city , users_city):
 def main():
     LCD = True
     users_city = []
-    city = input("Enter Name of city: ")
+    city = raw_input("Enter Name of city: ")
     users_city.append(city)
-    new_city = input("Would you like to enter another city? (Y/N)")
+    new_city = raw_input("Would you like to enter another city? (Y/N)")
 
 
 
@@ -32,7 +38,7 @@ def main():
     temp = data['main']['temp']
     description = data['weather'][0]['description']
     cel = 'Temperature : {} degree celcius'
-    far = (((temp) *(9/5)+32))
+    far = (((temp) *(9.0/5.0)+32))
 
     if(new_city != "y"):
         while(LCD == True):
@@ -41,7 +47,7 @@ def main():
     else:
         while(new_city == "y"):
             add_city(city, users_city)
-            new_city = input("Would you like to enter another city? (Y/N)")
+            new_city = raw_input("Would you like to enter another city? (Y/N)")
         while(LCD == True):
             users_city_len = len(users_city)
             for i in range(0 , users_city_len):
