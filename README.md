@@ -20,5 +20,4 @@ Program Runs:
 
 
 LCDDRIVE CODE LINK:
-//Users github
-"# weather_display_for_rpi"
+https://github.com/the-raspberry-pi-guy/lcd
