@@ -12,12 +12,15 @@
 
 import datetime
 import time
+import keyboard
 import requests
 import sys
 from pprint import pprint
+import lcddriver
+display = lcddriver.lcd()
 
 def add_city(city , users_city):
-        city = raw_input("Enter name of city: ")
+        city = input("Enter name of city: ")
         users_city.append(city)
         return(users_city)
 
@@ -37,13 +40,20 @@ def main():
     data = res.json()
     temp = data['main']['temp']
     description = data['weather'][0]['description']
-    cel = 'Temperature : {} degree celcius'
+    cel = ('Temperature : {} degree celcius')
     far = (((9.0/5.0) *(temp)+32))
 
     if(new_city != "y"):
+        print("Sending Info To Display")
         while(LCD == True):
-            print("Weather in " + users_city[0] + ": "+ str(far))
-            print("Time: " + datetime.datetime.now().strftime("%H:%M:%S"))
+            display.lcd_display_string("Current City", 1)
+            display.lcd_display_string(users_city[0], 2)
+            time.sleep(1)
+            display.lcd_clear()
+            display.lcd_display_string((("Weather: ") + (str(far))) , 1)
+            display.lcd_display_string(("Time: ") +(datetime.datetime.now().strftime("%H:%M:%S")) , 2)
+            time.sleep(1)
+            display.lcd_clear()
     else:
         while(new_city == "y"):
             add_city(city, users_city)
