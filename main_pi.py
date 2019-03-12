@@ -21,6 +21,14 @@ display = lcddriver.lcd()
 
 def add_city(city , users_city):
         city = input("Enter name of city: ")
+        city = input("Enter name of city: ")
+        url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=3371747f2cc96f96f53f3da617aa3f91&units=metric'.format(city)
+        res = requests.get(url)
+        data = res.json()
+        temp = data['main']['temp']
+        description = data['weather'][0]['description']
+        cel = 'Temperature : {} degree celcius'
+        far = (((9.0/5.0) *(temp)+32))
         users_city.append(city)
         return(users_city)
 
