@@ -5,10 +5,6 @@
 #Also you do not need to import keyboard
 
 
-#this code is for the computer
-#I made this code before applying it on the raspberry pi in order to sort out my algorithm
-#This code is in python 3 while the main_pi.py is in python 2.7, which is why some syntax is different
-
 
 import datetime
 import time
