@@ -78,48 +78,10 @@ def main():
                 time.sleep(1)
                 display.lcd_clear()
 
-                if(keyboard.is_pressed('1')):
-                    display.lcd_clear()
-                    i += 1
-                    display.lcd_display_string("Current City", 1)
-                    display.lcd_display_string(users_city[i], 2)
-                    time.sleep(1)
-                    display.lcd_clear()
-                    display.lcd_display_string((("Weather: ") + (str(weather_for_city[i]))) , 1)
-                    display.lcd_display_string(("Time: ") +(datetime.datetime.now().strftime("%H:%M:%S")) , 2)
-                    time.sleep(1)
-                    display.lcd_clear()
-
-
-                elif(keyboard.is_pressed('2')):
-                    i += 2
-                    print("Time" + datetime.datetime.utcnow().strftime("%H:%M:%S"))
-                    print(("Weather in ") + str(users_city[i]) + (": ")+ str(weather_for_city[i]))
-                else:
-
-                display.lcd_clear()
+#Gonna try to add a while loop here to loop through the different citites
 
 
 
-                if(keyboard.is_pressed('1')):
-                    display.lcd_clear()
-                    i += 1
-                    display.lcd_display_string("Current City", 1)
-                    display.lcd_display_string(users_city[i], 2)
-                    time.sleep(1)
-                    display.lcd_clear()
-                    display.lcd_display_string((("Weather: ") + (str(weather_for_city[i]))) , 1)
-                    display.lcd_display_string(("Time: ") +(datetime.datetime.now().strftime("%H:%M:%S")) , 2)
-                    time.sleep(1)
-                    display.lcd_clear()
-
-
-                elif(keyboard.is_pressed('2')):
-                    i += 2
-                    print("Time" + datetime.datetime.utcnow().strftime("%H:%M:%S"))
-                    print(("Weather in ") + str(users_city[i]) + (": ")+ str(weather_for_city[i]))
-                else:
-                    pass
     print(users_city)
     print(weather_for_city)
 
