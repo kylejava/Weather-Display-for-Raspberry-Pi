@@ -68,19 +68,20 @@ def main():
         while(LCD == True):
             users_city_len = len(users_city)
             for i in range(0 , users_city_len):
-                i = 0
-                display.lcd_display_string("Current City", 1)
-                display.lcd_display_string(users_city[0], 2)
-                time.sleep(1)
-                display.lcd_clear()
-                display.lcd_display_string((("Weather: ") + (str(weather_for_city[i]))) , 1)
-                display.lcd_display_string(("Time: ") +(datetime.datetime.now().strftime("%H:%M:%S")) , 2)
-                time.sleep(1)
-                display.lcd_clear()
-
-#Gonna try to add a while loop here to loop through the different citites
-
-
+                while(i != users_city_len):
+                        display.lcd_display_string("Current City", 1)
+                        display.lcd_display_string(users_city[i], 2)
+                        time.sleep(1)
+                        display.lcd_clear()
+                        display.lcd_display_string((("Weather: ") + (str(weather_for_city[i]))) , 1)
+                        display.lcd_display_string(("Time: ") +(datetime.datetime.now().strftime("%H:%M:%S")) , 2)
+                        time.sleep(1)
+                        display.lcd_clear()
+                        i += 1
+                        if(i == users_city_len):
+                                i = 0
+                        else:
+                                pass
 
     print(users_city)
     print(weather_for_city)
