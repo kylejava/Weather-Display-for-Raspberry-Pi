@@ -7,15 +7,14 @@ Materials:
 2. LCD screen (at least 16x2)
 3. Female to Female wires
 * IF you dont have female to female wires you can use a breadboard, but you need 8 female to male wires
-4. breadboard
-5. Resistor
-6. Button
+4. breadboard(optional)
+
 
 Program Runs:
 1. Computer will ask for users city
 2. City's weather and time will prompt  on the lcd display
 3. User can enter another city name and will be added to a list
-4. User can change city location by pressing the button on breadboard
+
 
 
 
