@@ -2,6 +2,11 @@ Hello! My name is Kyle Java
 I am creating a program that would allow the user input their city and show the current weather and time
 on a Raspberry Pi display
 
+!!!Still trying to figure out how to get the time for EACH city,
+    as of right now itll only print the time on your local computer
+    it will still print the weather of the city you enter
+
+
 Materials:
 1. Raspberry pi
 2. LCD screen (at least 16x2)
