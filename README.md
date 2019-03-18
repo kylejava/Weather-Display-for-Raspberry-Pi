@@ -13,12 +13,14 @@ Materials:
 3. Female to Female wires
 * IF you dont have female to female wires you can use a breadboard, but you need 8 female to male wires
 4. breadboard(optional)
+5. Button
 
 
 Program Runs:
 1. Computer will ask for users city
 2. City's weather and time will prompt  on the lcd display
 3. User can enter another city name and will be added to a list
+4. User can change city on the display by holding down button until city changes
 
 
 

@@ -80,15 +80,6 @@ def main():
             users_city_len = len(users_city)
             for i in range(0 , users_city_len):
                 while(i != users_city_len):
-                        if(button == False):
-                                if(i != users_city_len):
-                                        i += 1
-                                elif(i == users_city_len):
-                                        i = 0
-                        else:
-                                pass
-
-                        button = GPIO.input(18)
                         display.lcd_display_string("Current City", 1)
                         display.lcd_display_string(users_city[i], 2)
                         time.sleep(1)
@@ -97,7 +88,13 @@ def main():
                         display.lcd_display_string(("Time: ") +(datetime.datetime.now().strftime("%H:%M:%S")) , 2)
                         time.sleep(1)
                         display.lcd_clear()
-    print(users_city)
-    print(weather_for_city)
+                        if(button == False):
+                                i += 1
+                            if(i == users_city_len):
+                                i = 0
+                        else:
+                                pass
+
+
 
 main()

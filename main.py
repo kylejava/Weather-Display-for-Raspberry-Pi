@@ -43,7 +43,7 @@ def main():
     weather_for_city= []
     weather_for_city.append(far)
     if(new_city != "y"):
-        while(LCD == False):
+        while(LCD == True):
             print("Weather in " + users_city[0] + ": "+ str(far))
             print("Time: " + datetime.datetime.now().strftime("%H:%M:%S"))
     else:
@@ -52,23 +52,17 @@ def main():
 
             new_city = input("Would you like to enter another city? (Y/N)")
 
-        while(LCD == False):
+        while(LCD == True):
             users_city_len = len(users_city)
             for i in range(0 , users_city_len):
-                i = 0
+
                 print("Time" + datetime.datetime.utcnow().strftime("%H:%M:%S"))
                 print(("Weather in ") + str(users_city[i]) + (": ")+ (str(weather_for_city[i])))
-                if(keyboard.is_pressed('1')):
-                    i += 1
-                    print("Time" + datetime.datetime.utcnow().strftime("%H:%M:%S"))
-                    print(("Weather in ") + str(users_city[i]) + (": ")+ str(weather_for_city[i]))
-                elif(keyboard.is_pressed('2')):
-                    i += 2
-                    print("Time" + datetime.datetime.utcnow().strftime("%H:%M:%S"))
-                    print(("Weather in ") + str(users_city[i]) + (": ")+ str(weather_for_city[i]))
+                i += 1
+                if (i == users_city_len):
+                    i = 0
                 else:
                     pass
-    print(users_city)
-    print(weather_for_city)
+
 
 main()
