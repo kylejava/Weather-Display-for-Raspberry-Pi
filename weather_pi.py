@@ -80,6 +80,7 @@ def main():
             users_city_len = len(users_city)
             for i in range(0 , users_city_len):
                 while(i != users_city_len):
+                        print("Hold Down Button Until City Changes To Change The Current City")
                         display.lcd_display_string("Current City", 1)
                         display.lcd_display_string(users_city[i], 2)
                         time.sleep(1)
