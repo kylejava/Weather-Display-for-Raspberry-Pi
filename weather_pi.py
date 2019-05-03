@@ -19,7 +19,7 @@ import RPi.GPIO as GPIO
 display = lcddriver.lcd()
 def add_city(weather_for_city , users_city):
     city = raw_input("Enter name of city: ")
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=3371747f2cc96f96f53f3da617aa3f91&units=metric'.format(city)
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid='YOUR API KEY'&units=metric'.format(city)
     res = requests.get(url)
     res = requests.get(url)
     data = res.json()
