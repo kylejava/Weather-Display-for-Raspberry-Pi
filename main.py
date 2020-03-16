@@ -12,7 +12,7 @@ from pprint import pprint
 
 def add_city(weather_for_city , users_city):
     city = input("Enter name of city: ")
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=YOUR API KEY&units=metric'.format(city)
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=APIKEY&units=metric'.format(city)
     res = requests.get(url)
     data = res.json()
     temp = data['main']['temp']
@@ -32,7 +32,7 @@ def main():
     users_city.append(city)
     new_city = input("Would you like to enter another city? (Y/N)")
 
-    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid='YOUR API KEY'&units=metric'.format(city)
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=APIKEY&units=metric'.format(city)
     res = requests.get(url)
     data = res.json()
     temp = data['main']['temp']
